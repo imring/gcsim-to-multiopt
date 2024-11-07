@@ -28,6 +28,14 @@ export default {
     "Lingering Aeon": ["burst", "aeonDmg"],
     "Dance of Abzendegi: Distant Dreams, Listening Spring": ["burst", "skillDmg"],
 
+    // ayaka
+    "Charge": ["charged", "dmg1"],
+    "Hyouka": ["skill", "press"],
+    "C2 Mini-Frostflake Seki no To (Bloom)": ["constellation2", "bloom"],
+    "Soumetsu (Bloom)": ["burst", "bloom"],
+    "C2 Mini-Frostflake Seki no To (Cutting)": ["constellation2", "dmg"],
+    "Soumetsu (Cutting)": ["burst", "cutting"],
+
     // artifacts
     "Sea-Dyed Foam": ["artifact:OceanHuedClam", "heal"],
 } as Record<string, string[]>;

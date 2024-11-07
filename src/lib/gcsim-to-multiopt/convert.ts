@@ -51,7 +51,7 @@ function convertAbil(abil: AbilInfo, addConvert?: Record<string, string[]>): [Cu
     abil.resists.forEach(resist => addBuff(resist.element, resist.amount, true));
     
     if (abil.defShred) {
-        bonusStats["enemyDefRed_"] = abil.defShred;
+        bonusStats["enemyDefRed_"] = abil.defShred * 100;
     }
 
     const result: CustomTarget = {
