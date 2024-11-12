@@ -4,6 +4,7 @@
     import { readGZ, readJSON } from '$lib';
     import { getCharacterAbils } from "$lib/gcsim-to-multiopt";
     import { convertAbils } from '$lib/gcsim-to-multiopt/convert';
+    import getAbilities from '$lib/gcsim-to-multiopt/config/abil_name';
 
     import type { Sample } from '$lib/gcsim-to-multiopt/gcsim_types';
     import type { CustomMultiTarget } from '$lib/gcsim-to-multiopt/go_types';
@@ -31,15 +32,17 @@
         const [abilities, mods] = getCharacterAbils(sample, charName, ignoredMods);
         availabledMods = mods;
 
-        let addConvertData: Record<string, string[]> | undefined = undefined;
-        try {
-            addConvertData = addConvert ? JSON.parse(addConvert) : undefined;
-        } catch (e) {
-            errors.push("Invalid abilities JSON");
-            addConvertData = undefined;
+        let convert = getAbilities(charName);
+        if (addConvert) {
+            try {
+                const addConvertData = JSON.parse(addConvert);
+                convert = { ...convert, ...addConvertData };
+            } catch (e) {
+                errors.push("Invalid abilities JSON");
+            }
         }
 
-        const [convertedTarget, errorList] = convertAbils(abilities, addConvertData);
+        const [convertedTarget, errorList] = convertAbils(abilities, convert);
         target = convertedTarget;
         errors.push(...new Set(errorList.map(e => e.message)));
     };
