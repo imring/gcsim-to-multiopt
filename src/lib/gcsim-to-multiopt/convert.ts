@@ -3,7 +3,7 @@ import type { AbilInfo } from "./types";
 
 import statNameConvert from "./config/stat_name";
 import resistNameConvert from "./config/resist_name";
-import abilNameConvert from "./config/abil_name";
+import abilNameConvert, { type AbilsType } from "./config/abil_name";
 
 export function statConvert(name: string, value: number): [string, number] | Error {
     if (!statNameConvert[name]) {
@@ -25,8 +25,8 @@ export function resistConvert(element: string, value: number): [string, number] 
     return [element, value];
 }
 
-function convertAbil(abil: AbilInfo, addConvert?: Record<string, string[]>): [CustomTarget | undefined, Error[]] {
-    const abilPath = abilNameConvert[abil.name] || addConvert?.[abil.name];
+function convertAbil(abil: AbilInfo, convert: AbilsType): [CustomTarget | undefined, Error[]] {
+    const abilPath = convert[abil.name];
     if (!abilPath) {
         return [undefined, [new Error(`Unknown ability "${abil.name}"`)]];
     }
@@ -86,8 +86,8 @@ export function mergeCustomTargets(targets: CustomTarget[]): CustomTarget[] {
     return Array.from(mergedMap.values());
 }
 
-export function convertAbils(abils: AbilInfo[], addConvert?: Record<string, string[]>): [CustomMultiTarget, Error[]] {
-    const result = abils.map(x => convertAbil(x, addConvert));
+export function convertAbils(abils: AbilInfo[], convert: AbilsType): [CustomMultiTarget, Error[]] {
+    const result = abils.map(x => convertAbil(x, convert));
     const targets: CustomTarget[] = mergeCustomTargets(result.
         map(x => x[0]).
         filter((x): x is CustomTarget => x !== undefined)

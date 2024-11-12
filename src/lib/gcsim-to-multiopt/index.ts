@@ -2,7 +2,11 @@ import * as fs from "fs";
 import * as zlib from "zlib";
 
 import type { Character, LogDetails, Sample } from './gcsim_types';
-import type { AbilInfo, Buffs, InfusionInfo, Mods, Resist } from './types';
+import type { AbilInfo, Buffs, Mods, Resist } from './types';
+import type { CustomMultiTarget } from "./go_types";
+
+import getAbilities from "./config/abil_name";
+import { convertAbils } from "./convert";
 
 export function readJSON(input: string): Sample {
     const data = fs.readFileSync(input, 'utf-8');
@@ -154,7 +158,7 @@ export function getCharacterAbils(sample: Sample, charName: string, ignoredMods:
 // const charName: string = "kokomi";
 // const ignoredMods: string[] = ["kokomi-passive", "moonglow-heal-bonus", "ohc-2pc"];
 // const [abils, availabledMods]: [AbilInfo[], string[]] = getCharacterAbils(sample, charName, ignoredMods);
-// const [target, errors]: [CustomMultiTarget, Error[]] = convertAbils(abils);
+// const [target, errors]: [CustomMultiTarget, Error[]] = convertAbils(abils, getAbilities(charName));
 
 // console.log(JSON.stringify(target));
 // console.log([...new Set(errors.map(x => x.message))]);
