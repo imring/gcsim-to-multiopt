@@ -36,6 +36,18 @@ export default {
     "C2 Mini-Frostflake Seki no To (Cutting)": ["constellation2", "dmg"],
     "Soumetsu (Cutting)": ["burst", "cutting"],
 
+    // neuvillette
+    "Charged Attack: Equitable Judgment": ["charged","judgmentDmg"],
+    "O Tides, I Have Returned: Waterfall DMG": ["burst","waterfallDmg"],
+    "O Tides, I Have Returned: Skill DMG": ["burst","skillDmg"],
+    "Spiritbreath Thorn (Neuvillette)": ["skill","thornDmg"],
+    "O Tears, I Shall Repay": ["skill","skillDmg"],
+
+    // hu tao
+    "Charge Attack": ["charged", "dmg"],
+    "Blood Blossom": ["skill", "dmg"],
+    "Spirit Soother": ["burst", "dmg"],
+
     // artifacts
     "Sea-Dyed Foam": ["artifact:OceanHuedClam", "heal"],
 } as Record<string, string[]>;
