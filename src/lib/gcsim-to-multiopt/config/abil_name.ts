@@ -65,6 +65,7 @@ const characterAbils: Record<string, AbilsType> = {
     },
 
     ayaka: {
+        "Charge": ["charged", "dmg1"],
         "Hyouka": ["skill", "press"],
         "C2 Mini-Frostflake Seki no To (Bloom)": ["constellation2", "bloom"],
         "Soumetsu (Bloom)": ["burst", "bloom"],
@@ -96,7 +97,7 @@ const characterAbils: Record<string, AbilsType> = {
     },
 
     fischl: {
-        "Oz (Summon)": ["skill", "summonDmg"],
+    "Oz (Summon)": ["skill", "summonDmg"],
         "Oz (Skill)": ["skill", "ozDmg"],
         "Oz (Burst)": ["skill", "ozDmg"],
         "Fischl A4": ["passive2", "dmg"],
@@ -178,8 +179,11 @@ const characterAbils: Record<string, AbilsType> = {
     ayato : {
         "Kamisato Art: Suiyuu":["burst","dmg"],
         "Kamisato Art: Kyouka":["skill","illusionDmg"],
+        "Normal 0": ["skill", "dmg1"],
+        "Normal 1": ["skill", "dmg2"],
+        "Normal 2": ["skill", "dmg3"],
 
-        // TODO: add kamisato art: kyouka normal attack
+        // TODO: distinguish between skill and non skill normal attacks
     },
 
     yunjin: {
@@ -422,13 +426,6 @@ const characterAbils: Record<string, AbilsType> = {
         "Flipclaw Strike":["skill","strikeDmg"],
         "Urgent Neko Parcel":["skill","parcelDmg"],
     },
-
-
-
-
-
-
-
 };
 
 export default function (charName?: string) {
