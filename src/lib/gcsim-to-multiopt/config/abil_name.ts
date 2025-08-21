@@ -90,6 +90,13 @@ const characterAbils: Record<string, AbilsType> = {
     mavuika: {
         "Flamestrider Charged Attack (Cyclic)":["skill", "chargedCyclicDmg"],
         "Flamestrider Sprint":["skill", "sprintDmg"],
+        "Flamestrider Charged Attack (Final)":["skill","chargedFinalDmg"],
+        "Flamestrider Normal 0":["skill","normal1Dmg"],
+        "Flamestrider Normal 1":["skill","normal2Dmg"],
+        "Flamestrider Normal 2":["skill","normal3Dmg"],
+        "Flamestrider Normal 3":["skill","normal4Dmg"],
+        "Flamestrider Normal 4":["skill","normal5Dmg"],
+        "Flamestrider Plunge":["skill","plungeDmg"],
         "Rings of Searing Radiance":["skill", "radianceDmg"],
         "The Named Moment":["skill", "skillDmg"],
         "The Named Moment (Flamestrider)":["skill", "skillDmg"],
@@ -97,13 +104,14 @@ const characterAbils: Record<string, AbilsType> = {
     },
 
     fischl: {
-    "Oz (Summon)": ["skill", "summonDmg"],
-        "Oz (Skill)": ["skill", "ozDmg"],
-        "Oz (Burst)": ["skill", "ozDmg"],
-        "Fischl A4": ["passive2", "dmg"],
-        "Fischl C6": ["constellation6","ozActiveCharDmg"],
-        "Midnight Phantasmagoria": ["burst", "dmg"],
-        "Her Pilgrimage of Bleak (C4)": ["constellation4","burstAdditionalDmg"],
+        "Oz (Summon)":["skill", "summonDmg"],
+        "Oz (Skill)":["skill", "ozDmg"],
+        "Oz (Burst)":["skill", "ozDmg"],
+        "Fischl A4":["passive2", "dmg"],
+        "Fischl C1":["constellation1","dmg"],
+        "Fischl C6":["constellation6","ozActiveCharDmg"],
+        "Midnight Phantasmagoria":["burst", "dmg"],
+        "Her Pilgrimage of Bleak (C4)":["constellation4","burstAdditionalDmg"],
     },
 
     alhaitham: {
@@ -446,6 +454,17 @@ const characterAbils: Record<string, AbilsType> = {
         "Burning Shadowhunt Shell (electro)":["passive2","electro"],
         "Burning Shadowhunt Shell (cryo)":["passive2","cryo"],
     },
+
+    keqing: {
+        "Thunderclap Slash":["skill","thunderclap"],
+        "Stellar Restoration":["skill","stiletto"],
+        "Starward Sword (Last Attack)":["burst","final"],
+        "Starward Sword (Consecutive Slash)":["burst","slash"],
+        "Stellar Restoration (Slashing)":["skill","slash"],
+        "Starward Sword (Initial)":["burst","initial"],
+        "Charge 0": ["charged", "dmg1"],
+        "Charge 1": ["charged", "dmg2"],
+    }
 };
 
 export default function (charName?: string) {
