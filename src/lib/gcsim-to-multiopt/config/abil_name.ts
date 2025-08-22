@@ -334,8 +334,16 @@ const characterAbils: Record<string, AbilsType> = {
     raiden: {
         "Eye of Stormy Judgement":["skill","dmg"],
         "Eye of Stormy Judgement (Strike)":["skill","coorDmg"],
+        "Musou Isshin 0":["burst","hit1"],
+        "Musou Isshin 1":["burst","hit2"],
+        "Musou Isshin 2":["burst","hit3"],
+        "Musou Isshin 3":["burst","hit41"],
+        "Musou Isshin 4":["burst","hit5"],
+        "Musou Isshin (Charged Attack)":["burst","charged1"],
+        "Musou Shinsetsu":["burst","dmg"],
+
         
-        //TODO : add Raiden Shogun's burst abilities
+        //TODO : add 2nd hit of musou isshin charged attack and musou isshin 4th hit
     },
 
     thoma: {
@@ -464,7 +472,30 @@ const characterAbils: Record<string, AbilsType> = {
         "Starward Sword (Initial)":["burst","initial"],
         "Charge 0": ["charged", "dmg1"],
         "Charge 1": ["charged", "dmg2"],
-    }
+    },
+
+    xinyan: {
+        "Sweeping Fervor":["skill","dmg"],
+        "Sweeping Fervor (DoT)":["skill","lvl3Dmg"],
+        "Riff Revolution":["burst","pressPhysDmg"],
+        "Riff Revolution (DoT)":["burst","dotPyroDmg"],
+    },
+
+    noelle: {
+        "Breastplate (C4)":["constellation4","dmg"],
+        "Sweeping Time (Skill)":["burst","skillDmg"],
+        "Sweeping Time (Burst)":["burst","burstDmg"],
+        "Breastplate":["skill","dmg"],
+        "Charge Attack":["charged","spinningDmg"],
+        "Charge Attack (Finisher)":["charged","finalDmg"],
+    },
+
+    gorou: {
+        "Crystal Collapse":["burst","crystalCollapse"],
+        "Inuzaka All-Round Defense":["skill","dmg"],
+        "Juuga: Forward Unto Victory":["burst","dmg"],
+        "Fully-Charged Aimed Shot":["charged","fully"],
+    },
 };
 
 export default function (charName?: string) {
