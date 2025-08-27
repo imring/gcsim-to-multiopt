@@ -155,6 +155,7 @@ const characterAbils: Record<string, AbilsType> = {
         "Salon Member: Mademoiselle Crabaletta":["skill","crabDmg"],
         "Salon Solitaire: Ousia Bubble":["skill","bubbleDmg"],
         "Let the People Rejoice":["burst", "skillDmg"],
+        "Spiritbreath Thorn (Furina)":["normal","thornBladeDmg"],
     },
 
     kazuha: {
@@ -284,6 +285,7 @@ const characterAbils: Record<string, AbilsType> = {
         "Feathermoon Ring (electro)":["passive1","electro"],
         "Feathermoon Ring (cryo)":["passive1","cryo"],
         "Swallow-Wisp Pinion Dance: Detect":["burst","dmg"],
+        "Lustrous Moonrise":["burst","dmg"],
     },
 
     bennett: {
@@ -328,7 +330,7 @@ const characterAbils: Record<string, AbilsType> = {
     nahida: {
         "All Schemes to Know (Press)":["skill","pressDmg"],
         "All Schemes to Know (Hold)":["skill","holdDmg"],
-        "Trikarma Purification":["skill","karmaDmg"],    
+        "Tri-Karma Purification":["skill","karmaDmg"],    
     },
 
     raiden: {
@@ -495,6 +497,24 @@ const characterAbils: Record<string, AbilsType> = {
         "Inuzaka All-Round Defense":["skill","dmg"],
         "Juuga: Forward Unto Victory":["burst","dmg"],
         "Fully-Charged Aimed Shot":["charged","fully"],
+    },
+
+    yelan: {
+        "Exquisite Throw":["burst","throwDmg"],
+        "Lingering Lifeline":["skill","dmg"],
+        "Depth-Clarion Dice":["burst","pressDmg"],
+    },
+
+    wriothesley: {
+        "Surging Blade":["burst","bladeDmg"],
+        "Darkgold Wolfbite":["burst","skillDmg"],
+
+        // TODO: add rebuke: vaulting fist
+    },
+
+    baizhu: {
+        "Spiritvein Damage":["burst","dmg"],
+        "Universal Diagnosis":["skill","dmg"],
     },
 };
 
