@@ -8,6 +8,7 @@ const defaultAbils: AbilsType = {
     "Normal 2": ["normal", "2"],
     "Normal 3": ["normal", "3"],
     "Normal 4": ["normal", "4"],
+    "Normal 5": ["normal", "5"],
     "Charge": ["charged", "dmg"],
     "Charge Attack": ["charged", "dmg"],
     "Charge 0": ["charged", "dmg"],    
@@ -37,6 +38,9 @@ const defaultAbils: AbilsType = {
     "shatter":["reaction","shattered"],
     // artifacts
     "Sea-Dyed Foam": ["artifact:OceanHuedClam", "heal"],
+
+    // weapons
+    "Sequence of Solitude Proc":["weapon:SequenceOfSolitude","dmg"],
 };
 
 const characterAbils: Record<string, AbilsType> = {
@@ -516,6 +520,75 @@ const characterAbils: Record<string, AbilsType> = {
         "Spiritvein Damage":["burst","dmg"],
         "Universal Diagnosis":["skill","dmg"],
     },
+
+    layla: {
+        "Shooting Star":["skill","starDmg"],
+        "Starlight Slug":["burst","slugDmg"],
+        "Nights of Formal Focus":["skill","skillDmg"],
+        "Charge 0":["charged","dmg1"],
+        "Charge 1":["charged","dmg2"],
+    },
+
+    arlecchino: {
+        "Blood Debt Directive":["skill","sigilDmg"],
+        "All is Ash (Cleave)":["skill","finalDmg"],
+        "All is Ash (Spike)":["skill","spikeDmg"],
+        "Balemoon Rising":["burst","burstDmg"],
+    },
+
+    navia: {
+        "Cannon Fire Support":["burst","supportDmg"],
+        "Rosula Shardshot":["skill","totalShardDmg"],
+        "Surging Blade":["skill","bladeDmg"],
+        "As the Sunlit Sky's Singing Salute":["burst","skillDmg"],
+    },
+
+    sigewinne: {
+        "Rebound Hydrotherapy":["skill","dmg"],
+        "Spiritbreath Thorn (Sigewinne)":["skill","bladeDmg"],
+        "Super Saturated Syringing":["burst","spoutDmg"],
+        "Fully-Charged Aimed Shot":["charged","fullyAimed"],
+        "Mini-Stration Bubble":["charged","bubble"],
+    },
+
+    itto: {
+        "Saichimonji Slash":["charged","sSlash"],
+        "Arataki Kesagiri Final Slash":["charged","akFinal"],
+        "Masatsu Zetsugi: Akaushi Burst!":["skill","dmg"],
+        "Arataki Kesagiri Combo Slash":["charged","akSlash"],
+    },
+
+    zhongli: {
+        "Stone Stele (Tick)":["skill","resonance"],
+        "Stone Stele (Hold)":["skill","holdDMG"],
+        "Stone Stele (Initial)":["skill","stele"],
+        "Planet Befall":["burst","dmg"],
+    },
+
+    yaemiko: {
+        "Sesshou Sakura Tick":["skill","dmg3"],
+        "Great Secret Art: Tenko Kenshin":["burst","dmg"],
+        "Tenko Thunderbolt":["burst","tenkoDmg"],
+
+        // TODO: add level 1 and level 2 of sesshou sakura
+    },
+
+    sethos: {
+        "Dusk Bolt 2":["burst","dusk_3"],
+        "Dusk Bolt 1":["burst","dusk_1"],
+        "Dusk Bolt 0":["burst","dusk_0"],
+        "Ancient Rite: Thunderous Roar of Sand":["skill","dmg"],
+    },
+
+    heizou: {
+        "Heartstopper Strike":["skill","dmg"],
+        "Heartstopper Strike (Max Stacks)":["skill","dmg"],
+        "Windmuster Iris":["burst","hydro_iris_dmg"],
+        "Fudou Style Vacuum Slugger":["burst","slugger_dmg"],
+        "Normal 4":["normal","6"],
+
+        // TODO: add declension stacks to heartstopper strike
+    }
 };
 
 export default function (charName?: string) {
