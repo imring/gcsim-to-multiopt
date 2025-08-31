@@ -588,7 +588,32 @@ const characterAbils: Record<string, AbilsType> = {
         "Normal 4":["normal","6"],
 
         // TODO: add declension stacks to heartstopper strike
-    }
+        // possible way to do this would be to add weight to heartstopper strike hits based on declension stacks
+        // 0 stacks = 1 weight, 1 stack = 1.25 weight, 2 stacks = 1.5 weight, 3 stacks = 1.75 weight, 4 stacks = 2.5 weight
+    },
+
+    wanderer: {
+        "Gales of Reverie":["passive2","dmg"],
+        "Normal 0 (Windfavored)":["normal","0"],
+        "Normal 1 (Windfavored)":["normal","1"],
+        "Normal 2 (Windfavored)":["normal","2"],
+        "Charge Attack (Windfavored)":["charged","dmg"],
+        "Kyougen: Five Ceremonial Plays":["burst","dmg"],
+        "Hanega: Song of the Wind":["skill","dmg"],
+
+        // TODO: add windfavored state scaling increase
+    },
+
+    lynette: {
+        "Bogglecat Box":["burst","boxDmg"],
+        "Vivid Shot":["burst","shotDmg"],
+        "Magic Trick: Astonishing Shift":["burst","dmg"],
+        "Surging Blade (Lynette)":["skill","bladeDmg"],
+        "Enigmatic Feint":["skill","thrustDmg"],
+        "Normal 3": ["normal", "4"],
+        "Charge 0": ["charged", "dmg1"],
+        "Charge 1": ["charged", "dmg2"],
+    },
 };
 
 export default function (charName?: string) {
