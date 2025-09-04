@@ -3,6 +3,7 @@ export default {
     "hp%": "hp_",
     "atk": "atk",
     "atk%": "atk_",
+    "def": "def",
     "def%": "def_",
     "em": "eleMas",
     "er": "enerRech_",
